@@ -2,20 +2,11 @@ $(document).ready(function(){
 
 	/* Video player JS */
 	
-    $( ".video" ).hide();
     jQuery('.play').click(function(){
-        jQuery('.video-player').slideToggle(function() {
-            $( ".play" ).hide();
-            $( ".video" ).show();        
-          });
+        $('.video-player figure').css('visibility', 'hidden');
+        $('.play').css('visibility', 'hidden');
+        $('.video-player .video iframe').css('visibility', 'visible');
     });
-/*
-    jQuery(".fa-times" ).click(function() {
-        jQuery( ".nav-menu" ).slideToggle(function() {
-            $( ".fa-times" ).hide();
-            $( ".fa-bars" ).show();
-          });
-    });*/
 
 
 	/* JS For mobile view menu */
@@ -59,7 +50,7 @@ $(document).ready(function(){
 				}
 			},
 			{
-				breakpoint: 487,
+				breakpoint: 490,
 				settings: {
 				slidesToShow: 1,
 				slidesToScroll: 1,
@@ -79,7 +70,7 @@ $(document).ready(function(){
             {
                 breakpoint: 998,
                 settings: {
-                slidesToShow: 2,
+                slidesToShow: 3,
                 slidesToScroll: 1,
                 }
             },
