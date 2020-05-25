@@ -41,8 +41,8 @@ h1,h2,h3,h4,h5,h6{ margin:0; padding:0}
 figure{ padding:0; margin:0;}
 img{width: 100%;display: block;}
 ul,li{ text-decoration:none; display:inline; margin:0; padding:0;}
-a{ text-decoration:none; -webkit-text-decoration-line: none; text-decoration-line: none;display: inline-block;}
-a:hover{text-decoration:none; -webkit-text-decoration-line: none; text-decoration-line: none;}
+a{ text-decoration:none; -webkit-text-decoration-line: none; text-decoration-line: none;display: inline-block;outline: none;}
+a:hover{text-decoration:none; -webkit-text-decoration-line: none; text-decoration-line: none;outline: none;}
 p{ margin:0; padding:0}
 
 
@@ -122,6 +122,10 @@ body
 
 /* Header Section
 ------------------------------*/
+
+/* Fixed Header */
+
+/* Fixed Header */
 
 .pageheader
 {
@@ -369,8 +373,8 @@ i.fa.fa-times:hover
 {
 	background: url(../images/why-bg.png) no-repeat center; 
 	width: 100%;
-	padding-top: 50px;
-	padding-bottom: 71px;
+	background-size: cover;
+	padding: 70px 0px;
 }
 .why-choose-bg .why-choose-caption
 {
@@ -446,7 +450,7 @@ i.fa.fa-times:hover
     margin-bottom: 16px;
 	border: 0;
 	outline: none;
-	margin-top: 8px;
+	margin-top: 5px;
 }
 .why-choose-bg .why-choose-form .form-bg input::-webkit-input-placeholder
 {
@@ -477,6 +481,11 @@ input:nth-of-type(5)
 {
 	margin-bottom: 25px !important;
 }
+input:nth-of-type(5)::placeholder 
+{
+    background: url(../images/date-img.png) no-repeat right center;
+    background-size: 19px;
+}
 input[type="submit"]
 {
 	font-size: 18px;
@@ -497,10 +506,6 @@ input[type="submit"]:hover
 	color: #264095;
 	background-color: rgb(242, 242, 242);
 }
-input[type="submit"]::placeholder
-{
-	background: url(../images/date-img.png) contain no-repeat right center;
-}
 
 
 /* Resources Section
@@ -508,7 +513,7 @@ input[type="submit"]::placeholder
 .resources-bg
 {
 	background-color: rgb(242, 242, 242);
-	padding: 57px 0px; 
+	padding: 58px 0px; 
 }
 .resources-bg .resources-card
 {
@@ -517,7 +522,7 @@ input[type="submit"]::placeholder
 .resources-bg .resources-card .card
 {
 	background-color: #fff;
-    padding: 50px 26px;
+    padding: 48px 26px;
     text-align: center;
     margin: 0px 20px;
     color: #000;
@@ -529,21 +534,17 @@ input[type="submit"]::placeholder
 	max-width: 142px;
     margin: 0 auto;
     width: auto;
-    margin-bottom: 40px;
+    margin-bottom: 44px;
     max-height: 92px;
     display: inline-block;
 }
-/*.resources-bg .resources-card .card:nth-child(2) figure img
-{
-	width: 50%;
-}*/
 .resources-bg .resources-card .card h4
 {
 
 	font-size: 20px;
     font-family: "OpenSans";
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 .resources-bg .resources-card .card p
 {
@@ -551,13 +552,13 @@ input[type="submit"]::placeholder
     line-height: 24px;
     font-family: "OpenSans";
     font-weight: 300;
-    width: 90%;
+    width: 78%;
     margin: 0 auto;
     margin-bottom: 16px;
 }
 .resources-bg .resources-card .card .item-card-p
 {
-	margin-bottom: 41px;
+	margin-bottom: 40px;
 }
 .resources-bg .resources-card .card a
 {
@@ -576,23 +577,12 @@ input[type="submit"]::placeholder
 ------------------------------*/
 .companies-bg
 {
-	padding: 57px 0px;
+	padding: 52px 0px;
 }
 .companies-bg .caption-title
 {
-	margin-bottom: 57px;
+	margin-bottom: 50px;
 }
-/*.companies-bg .compliance-card .inner-card figure img
-{
-	max-width: 258px;
-    margin: 0 auto;
-    width: auto;
-    max-height: 158px;
-    display: inline-block;
-    -webkit-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}*/
 .companies-bg .slick-track
 {
 	display: flex;
@@ -603,6 +593,7 @@ input[type="submit"]::placeholder
     width: 100%;
     height: 100%;
     display: flex;
+    transition: 0.5s all ease;
 }
 .inner-card figure 
 {
@@ -622,7 +613,7 @@ input[type="submit"]::placeholder
     width: auto;
     /* padding: 20px; */
 }
-.companies-bg .compliance-card .inner-card figure img:hover
+.companies-bg .compliance-card .inner-card:hover
 {
 	-webkit-transform: scale(1.05);
 	    -ms-transform: scale(1.05);
@@ -651,7 +642,7 @@ input[type="submit"]::placeholder
 	display: -ms-flexbox;
 	display: flex;
     width: 100%;
-    padding-bottom: 10px;
+    padding-bottom: 23px;
     border-bottom: 2px solid #344692;
 }
 .pagefooter .footer-content .upperfooter .left-part
@@ -682,8 +673,8 @@ input[type="submit"]::placeholder
 }
 .pagefooter .footer-content .upperfooter .left-part .footer-contact img
 {
-	width: 25px;
-	height: 15px;
+	width: 20px;
+	height: 14px;
 }
 .pagefooter .footer-content .upperfooter .left-part a
 {
@@ -736,11 +727,12 @@ input[type="submit"]::placeholder
 }
 .pagefooter .footer-content .bottomfooter p
 {
-	font-size: 15px;
+	font-size: 12px;
 	font-family: "OpenSans";
     font-weight: 400;
-    padding: 10px 30px;
+    padding: 21px 20px;
     padding-bottom: 0px;
+    letter-spacing: 0.1px;
 }
 .pagefooter .footer-content .bottomfooter p a:hover
 {
@@ -849,7 +841,7 @@ input[type="submit"]::placeholder
 
 	input[type="submit"] 
 	{
-    	font-size: 13px;
+    	font-size: 15px;
 	}
 
 	.companies-bg .compliance-card figure 
@@ -892,13 +884,14 @@ input[type="submit"]::placeholder
 	.pageheader i
 	{
 		display: block;
-		top: 18%;
-		right: 2%;
+		top: 13%;
+		right: 2.2%;
 		font-size: 30px;
 	}
 	i.fa.fa-times 
 	{
     	top: 20px;
+    	font-size: 30px;
 	}
 	.full-nav-menu
 	{
@@ -958,7 +951,7 @@ input[type="submit"]::placeholder
 	{
 		width: 80%;
 	}
-
+	
 	.resources-bg
 	{
 		padding: 50px 0px;
@@ -1146,7 +1139,7 @@ input[type="submit"]::placeholder
 
 	.banner-bg 
 	{
-    	padding: 30px 0px;
+    	padding: 30px 10px;
 	}
 	.banner-bg .caption
 	{
@@ -1155,9 +1148,13 @@ input[type="submit"]::placeholder
 
 	.benefits-bg
 	{
-		padding: 30px 0px;
+		padding: 30px 10px;
 	}
 	
+	.why-choose-bg
+	{
+		padding: 30px 10px;
+	}
 	.why-choose-bg .why-choose-form .form-bg
 	{
 		width: 100%;
@@ -1174,17 +1171,20 @@ input[type="submit"]::placeholder
 
 	.resources-bg
 	{
-		padding: 30px 0px;
+		padding: 30px 10px;
 	}
-	/*.resources-bg .resources-card .card 
+	button.slick-arrow
 	{
-    	max-width: 350px;
-    	margin: 0 auto;
-	}*/
+		transform: translate(15px,-50%);
+	}
+	button.slick-next.slick-arrow
+	{
+		transform: translate(-15px,-50%) rotate(180deg);
+	}
 
 	.companies-bg
 	{
-		padding: 35px 0px;
+		padding: 30px 10px;
 	}
 
 	.pagefooter .footer-content .upperfooter .left-part figure img
@@ -1195,9 +1195,35 @@ input[type="submit"]::placeholder
 	{
 		margin-bottom: 20px;
 	}
+
+	.pagefooter
+	{
+		padding: 30px 10px;
+	}
+}
+@media(max-width: 375px)
+{
+	input[type="submit"]
+	{
+		font-size: 13px;
+	}
 }
 @media(max-width: 320px)
 {
+	.resources-bg .resources-card .card
+	{
+		margin: 0px 45px;
+	}
+
+	.companies-bg .inner-card
+	{
+		padding: 6px 40px;
+	}
+	.pageheader i 
+	{
+    	top: 9%;
+    	right: 4.8%;
+	}
 	.pagefooter .footer-content .upperfooter .left-part 
 	{
     	flex-direction: column;
