@@ -269,6 +269,10 @@ i.fa.fa-times:hover
     height: 100%;
     background: url(../images/play-button.png) no-repeat center;
     background-size: 80px;
+    transition: 0.5s all ease;
+}
+.banner-bg .video-player .play:hover 
+{
     background-color: rgba(0,0,0,0.5);
 }
 .banner-bg .caption
@@ -365,7 +369,7 @@ i.fa.fa-times:hover
 {
 	background: url(../images/why-bg.png) no-repeat center; 
 	width: 100%;
-	padding-top: 70px;
+	padding-top: 50px;
 	padding-bottom: 71px;
 }
 .why-choose-bg .why-choose-caption
@@ -486,6 +490,12 @@ input[type="submit"]
 	background-color: #face42;	
 	border: 0;
 	margin-bottom: 5px !important;
+	transition: 0.5s all ease;
+}
+input[type="submit"]:hover
+{
+	color: #264095;
+	background-color: rgb(242, 242, 242);
 }
 input[type="submit"]::placeholder
 {
