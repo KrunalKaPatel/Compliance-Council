@@ -1207,6 +1207,24 @@ input[type="submit"]:hover
 	{
 		font-size: 13px;
 	}
+	.resources-bg .resources-card .card
+	{
+		margin: 0px 50px;
+	}
+	.companies-bg .compliance-card figure
+	{
+		max-width: 230px;
+	}
+	.pagefooter .footer-content .upperfooter .left-part 
+	{
+    	flex-direction: column;
+	}
+	.pagefooter .footer-content .upperfooter .left-part figure img 
+	{
+    	max-width: 50%;
+    	margin: 0 auto;
+	    margin-bottom: 10px;
+	}
 }
 @media(max-width: 320px)
 {
@@ -1224,14 +1242,5 @@ input[type="submit"]:hover
     	top: 9%;
     	right: 4.8%;
 	}
-	.pagefooter .footer-content .upperfooter .left-part 
-	{
-    	flex-direction: column;
-	}
-	.pagefooter .footer-content .upperfooter .left-part figure img 
-	{
-    	max-width: 50%;
-    	margin: 0 auto;
-	    margin-bottom: 10px;
-	}
+	
 }
