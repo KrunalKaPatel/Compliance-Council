@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+    $('#loader').hide();
+
 	/* Video player JS */
 	
     jQuery('.play').click(function(){
@@ -97,3 +99,5 @@ $(document).ready(function(){
 
     $( ".datepicker" ).datepicker();
 });
+
+

@@ -48,6 +48,18 @@ p{ margin:0; padding:0}
 
 /* default css
 ------------------------------*/
+#loader
+{
+	height: 100vh;
+	width: 100%;	
+    position: fixed;
+    z-index: 999;
+    overflow: hidden;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 .slick-slide 
 {
     outline: none;
@@ -1203,6 +1215,12 @@ input[type="submit"]:hover
 }
 @media(max-width: 375px)
 {
+	.pageheader i 
+	{
+    	top: 10%;
+    	right: 4%;
+	}
+
 	input[type="submit"]
 	{
 		font-size: 13px;
