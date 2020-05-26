@@ -46,7 +46,7 @@ a:hover{text-decoration:none; -webkit-text-decoration-line: none; text-decoratio
 p{ margin:0; padding:0}
 
 
-/* default css
+/* Loader Design
 ------------------------------*/
 #loader
 {
@@ -60,6 +60,28 @@ p{ margin:0; padding:0}
 	justify-content: center;
 	align-items: center;
 }
+.svgLoader 
+{
+    animation: spin 0.5s linear infinite;
+    margin: auto;
+}
+.divLoader 
+{
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 9999;
+}
+@keyframes spin 
+{
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+/* default css
+------------------------------*/
 .slick-slide 
 {
     outline: none;
@@ -194,6 +216,11 @@ body
 /* Mobile View Menu
 ----------------------------*/
 
+i.fa.fa-times
+{
+	position: fixed;
+	z-index: 21;
+}
 i.fa.fa-times:hover 
 {
     color: #fff;
@@ -233,7 +260,7 @@ i.fa.fa-times:hover
 }
 .pageheader .nav-menu
 {
-	position: absolute;
+	position: fixed;
     top: 0;
     right: 0;
     width: 100%;
@@ -241,7 +268,8 @@ i.fa.fa-times:hover
     height: 100vh;
     background-color: #264095;
     opacity: 1;
-    z-index: 8;
+    z-index: 20;
+    display: none;
 }
 
 /* Banner Section
@@ -893,10 +921,14 @@ input[type="submit"]:hover
 }
 @media(max-width: 768px)
 {
+	.pageheader .nav-menu
+	{
+		display: block;
+	}
 	.pageheader i
 	{
 		display: block;
-		top: 13%;
+		top: 20%;
 		right: 2.2%;
 		font-size: 30px;
 	}
