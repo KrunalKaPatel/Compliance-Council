@@ -152,6 +152,7 @@ p{ margin:0; padding:0}
 body
 {
 	counter-reset: section;
+	scroll-behavior: smooth;
 }
 
 /* Header Section
