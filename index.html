@@ -15,6 +15,14 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
 
+	<style type="text/css">
+		.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+	</style>
 </head>
 <body>
 	<div id="loader">
@@ -26,7 +34,7 @@
 	<section id="pageWrapper">
 
 		<!-- Header -->
-		<header class="pageheader display-flex">
+		<header class="pageheader display-flex" id="myHeader">
 			<div class="container display-flex">
 				<div class="council-logo">
 					<figure>
@@ -294,6 +302,20 @@
 	</section>
 
 	<!-- JavaScript -->
+	<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
 	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/js/slick.min.js"></script>
 	<script type="text/javascript" src="assets/js/jquery-ui.js"></script>
