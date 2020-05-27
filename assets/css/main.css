@@ -159,7 +159,13 @@ body
 ------------------------------*/
 
 /* Fixed Header */
-
+.sticky 
+{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
 /* Fixed Header */
 
 .pageheader
@@ -170,6 +176,7 @@ body
 .council-logo
 {
 	width: 27%;
+	transition: 0.5s all ease;
 }
 .nav-menu-button
 {

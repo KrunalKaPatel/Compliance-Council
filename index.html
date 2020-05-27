@@ -15,14 +15,6 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
 
-	<style type="text/css">
-		.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-}
-	</style>
 </head>
 <body>
 	<div id="loader">
@@ -76,7 +68,7 @@
 		<section id="mainContantArea">
 
 			<!-- Banner Section -->
-			<section class="banner-bg display-flex">
+			<section class="banner-bg display-flex" id="video-bg">
 				<div class="container display-flex">
 					<div class="video-player">
 						<figure>
@@ -305,14 +297,18 @@
 	<script>
 window.onscroll = function() {myFunction()};
 
-var header = document.getElementById("myHeader");
-var sticky = header.offsetTop;
+let header = document.getElementById("myHeader");
+let sticky = header.offsetTop;
 
 function myFunction() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
+    document.getElementById("video-bg").style.paddingTop = "250px";
+    document.querySelector(".council-logo").style.width = "15%";
   } else {
     header.classList.remove("sticky");
+    document.getElementById("video-bg").style.paddingTop = "68px";
+    document.querySelector(".council-logo").style.width = "";
   }
 }
 </script>
