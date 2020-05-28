@@ -567,6 +567,10 @@ input[type="submit"]:hover
 {
 	margin: 8px -15px;
 }
+.resources-bg .slick-list
+{
+	padding-bottom: 10px;
+}
 .resources-bg .resources-card .card
 {
 	background-color: #fff;
@@ -574,6 +578,7 @@ input[type="submit"]:hover
     text-align: center;
     margin: 0px 20px;
     color: #000;
+    height: 460px;
     min-height: 447px;
     filter: drop-shadow(1px 1.732px 2.5px rgba(0,0,1,0.2));
 }
@@ -600,7 +605,7 @@ input[type="submit"]:hover
     line-height: 24px;
     font-family: "OpenSans";
     font-weight: 300;
-    width: 78%;
+    width: 88%;
     margin: 0 auto;
     margin-bottom: 16px;
 }
@@ -1271,7 +1276,7 @@ input[type="submit"]:hover
 	}
 	.companies-bg .compliance-card figure
 	{
-		max-width: 230px;
+		max-width: 210px;
 	}
 	.pagefooter .footer-content .upperfooter .left-part 
 	{
