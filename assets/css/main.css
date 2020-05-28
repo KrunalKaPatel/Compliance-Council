@@ -648,6 +648,17 @@ input[type="submit"]:hover
     display: flex;
     transition: 0.5s all ease;
 }
+.compliance-card {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.compliance-card .slick-list{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
 .inner-card figure 
 {
     padding: 20px;
