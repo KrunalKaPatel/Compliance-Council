@@ -81,7 +81,7 @@ $(document).ready(function(){
             {
                 breakpoint: 774,
                 settings: {
-                slidesToShow: 2,
+                slidesToShow: 3,
                 slidesToScroll: 1,
                 }
             },
